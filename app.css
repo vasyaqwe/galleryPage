@@ -173,6 +173,7 @@ main img:nth-child(5) {
     height: 100%;
 }
 
+
 main img:nth-child(6) {
     grid-area: six;
     height: 100%;

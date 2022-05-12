@@ -1,0 +1,238 @@
+:root {
+    --color-primary: #4E5150;
+    --color-grey-dark: #A9A9A9;
+    --color-grey: #BDBDBD;
+    --color-grey-light: #E5E5E5;
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    margin-inline: auto;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    width: min(90%, 70.5rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+header {
+    margin-top: 2rem;
+}
+
+header img {
+    border-radius: 16px;
+    width: 110px;
+    margin-inline: auto;
+    margin-bottom: 0.5rem;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 10px;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+small {
+    color: var(--color-grey-dark);
+    font-size: 10px;
+}
+
+span {
+    color: var(--color-grey);
+}
+
+header div>* {
+    width: min(100%, 68px);
+    height: min(100%, 47px);
+    padding-bottom: 0.2rem;
+    background-color: var(--color-grey-light);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 12px;
+}
+
+main img {
+    border-radius: 12px;
+}
+
+main {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one two two'
+        'three three four'
+        'six five four'
+}
+
+main img:nth-child(1) {
+    grid-area: one;
+}
+
+main img:nth-child(2) {
+    grid-area: two;
+    height: 100%;
+}
+
+main img:nth-child(3) {
+    grid-area: three;
+    height: 100%;
+}
+
+main img:nth-child(4) {
+    grid-area: four;
+    width: 100%;
+}
+
+main img:nth-child(5) {
+    grid-area: five;
+    height: 100%;
+}
+
+main img:nth-child(6) {
+    grid-area: six;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    color: var(--color-grey);
+}
+
+@media (min-width: 278px) {
+    header div {
+        font-size: 12px;
+    }
+
+    header div>* {
+        width: 78px;
+        height: 53px;
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 30em) {
+    h1 {
+        font-size: 24px;
+    }
+
+    main {
+        gap: 1rem;
+    }
+
+    small {
+        font-size: 14px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    header img {
+        border-radius: 16px;
+        width: 150px;
+        margin-inline: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    header div {
+        gap: 1rem;
+        font-size: 18px;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    header div>* {
+        width: 108px;
+        height: 83px;
+        background-color: var(--color-grey-light);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 12px;
+    }
+}
